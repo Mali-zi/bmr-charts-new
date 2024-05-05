@@ -1,0 +1,15 @@
+{
+  "topic_id": 0,
+  "icon_id": 0,
+  "title": "Дешборд для сертификации",
+  "srt": 2147483647,
+  "config": {
+    "icon": "trendingUp",
+    "viewport": {
+      "h": 8,
+      "w": 12
+    }
+  },
+  "created": "2024-04-26T12:48:17.063002+03:00",
+  "is_hidden": 0
+}

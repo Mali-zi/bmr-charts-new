@@ -1,0 +1,7 @@
+{
+  "port": 3003,
+  "server": "https://dzm8.class.luxmsbi.com/",
+  "noRemove": true,
+  "include": "ds_11",
+  "dashboards": true
+}

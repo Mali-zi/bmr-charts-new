@@ -1,0 +1,34 @@
+{
+  "parent_id": null,
+  "dashboard_id": 1,
+  "view_class": "VizelKoobControl",
+  "title": "Фильтры",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 2,
+      "w": 3,
+      "x": 12,
+      "y": 6
+    },
+    "options": [
+      "EastPanel",
+      "Hidden"
+    ],
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "xAxis": "gasoline_type;last_update",
+      "yAxis": "measures",
+      "dimensions": [
+        "gasoline_type",
+        "last_update"
+      ]
+    }
+  },
+  "created": "2024-04-25T12:55:13.426419+03:00"
+}

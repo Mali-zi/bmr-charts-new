@@ -1,0 +1,37 @@
+{
+  "parent_id": null,
+  "dashboard_id": 1,
+  "view_class": "1I1.bublik",
+  "title": "",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 4,
+      "w": 6,
+      "x": 6,
+      "y": 4
+    },
+    "options": [
+      "DisplayAllBadges"
+    ],
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "limit": 8,
+      "style": {},
+      "yAxis": "measures;city",
+      "sortBy": "-rub_avg_price",
+      "measures": [
+        "avg(price)*86:rub_avg_price"
+      ],
+      "dimensions": [
+        "city"
+      ]
+    }
+  },
+  "created": "2024-04-25T12:46:00.249308+03:00"
+}

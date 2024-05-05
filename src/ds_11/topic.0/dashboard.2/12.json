@@ -1,0 +1,39 @@
+{
+  "parent_id": null,
+  "dashboard_id": 2,
+  "view_class": "111.thermometer",
+  "title": "Транзакции по всем видам топлива, шт.",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 3,
+      "w": 7,
+      "x": 5,
+      "y": 5
+    },
+    "display": {
+      "range": [
+        0,
+        100000
+      ]
+    },
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "style": {},
+      "xAxis": "",
+      "yAxis": "measures",
+      "filters": {
+        "city": true
+      },
+      "measures": [
+        "count(price):count_price"
+      ]
+    }
+  },
+  "created": "2024-04-25T14:46:47.902397+03:00"
+}

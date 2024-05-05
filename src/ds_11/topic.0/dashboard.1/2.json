@@ -1,0 +1,40 @@
+{
+  "parent_id": null,
+  "dashboard_id": 1,
+  "view_class": "111.label",
+  "title": "Средние продажи в г. ROMA по сравнению с г. MILANO, руб.",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 2,
+      "w": 5,
+      "x": 7,
+      "y": 2
+    },
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "style": {},
+      "xAxis": ";city",
+      "yAxis": "measures",
+      "filters": {
+        "city": [
+          "=",
+          "ROMA",
+          "MILANO"
+        ]
+      },
+      "measures": [
+        "avg(price)*86:rub_avg_price"
+      ],
+      "dimensions": [
+        "city"
+      ]
+    }
+  },
+  "created": "2024-04-25T11:34:25.960444+03:00"
+}

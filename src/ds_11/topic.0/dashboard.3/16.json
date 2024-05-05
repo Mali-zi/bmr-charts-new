@@ -1,0 +1,135 @@
+{
+  "parent_id": null,
+  "dashboard_id": 3,
+  "view_class": "11I.board",
+  "title": "Дэш типа «Board» ",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 8,
+      "w": 5,
+      "x": 7,
+      "y": 0
+    },
+    "display": {
+      "headerStyle": {
+        "color": "rgba(21,6,71,1)",
+        "fontSize": 20,
+        "background": "rgba(216,255,0,1)"
+      }
+    },
+    "options": [],
+    "children": [
+      {
+        "id": "16:0",
+        "frame": {
+          "h": 6,
+          "w": 4,
+          "x": 0,
+          "y": 0
+        },
+        "title": "Данные",
+        "report": [
+          {
+            "title": "Отчёт для сертификации 26_04",
+            "output": "xlsx",
+            "template": "res:ds_11:.reports/Отчет для сертификации"
+          }
+        ],
+        "display": {
+          "headerStyle": {
+            "color": "rgba(255,255,255,1)",
+            "fontSize": 18,
+            "background": "rgba(17,122,0,1)"
+          }
+        },
+        "options": [
+          "FullWidth",
+          "ActiveTab"
+        ],
+        "dataSource": {
+          "koob": "luxms_edu.luxms_edu_oil_sales",
+          "style": {
+            "measures": {
+              "sum_price": {
+                "color": "",
+                "title": "Сумма, €",
+                "maxWidth": "200px"
+              }
+            },
+            "dimensions": {
+              "operator": {
+                "maxWidth": "400px"
+              }
+            }
+          },
+          "xAxis": "operator",
+          "yAxis": "measures",
+          "filters": {
+            "city": true,
+            "gasoline_type": true
+          },
+          "measures": [
+            "sum(price):sum_price"
+          ],
+          "dimensions": [
+            "operator"
+          ]
+        },
+        "view_class": "dashlet/koob-table-simple",
+        "onClickDataPoint": "lpe:setKoobFilters('luxms_edu.luxms_edu_oil_sales','operator',['=',operator])"
+      },
+      {
+        "id": "16:1",
+        "frame": {
+          "h": 2,
+          "w": 4,
+          "x": 0,
+          "y": 6
+        },
+        "title": "Значение",
+        "display": {
+          "title": "Итого, руб.",
+          "headerStyle": {
+            "color": "rgba(255,255,255,1)",
+            "fontSize": 18,
+            "background": "rgba(17,122,0,1)"
+          }
+        },
+        "options": [],
+        "dataSource": {
+          "koob": "luxms_edu.luxms_edu_oil_sales",
+          "style": {},
+          "yAxis": "measures",
+          "filters": {
+            "city": true,
+            "operator": true,
+            "gasoline_type": true
+          },
+          "measures": [
+            "sum(price)*86:rub_sum_price"
+          ]
+        },
+        "view_class": "dashlet/111.label"
+      }
+    ],
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "style": {},
+      "yAxis": "measures",
+      "filters": {
+        "city": true,
+        "gasoline_type": true
+      },
+      "measures": [
+        "sum(price):sum_price"
+      ]
+    }
+  },
+  "created": "2024-04-26T13:41:26.516007+03:00"
+}

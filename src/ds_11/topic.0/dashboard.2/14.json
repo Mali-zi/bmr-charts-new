@@ -1,0 +1,36 @@
+{
+  "parent_id": null,
+  "dashboard_id": 2,
+  "view_class": "111.label",
+  "title": "",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 2,
+      "w": 7,
+      "x": 5,
+      "y": 8
+    },
+    "display": {
+      "fontSize": 32,
+      "textAlign": "center",
+      "fontFamily": "Times New Roman",
+      "customValue": "Данные носят предварительный характер",
+      "verticalAlign": "center"
+    },
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "style": {},
+      "yAxis": "measures",
+      "measures": [
+        "count(price):count_price"
+      ]
+    }
+  },
+  "created": "2024-04-25T17:09:56.295049+03:00"
+}

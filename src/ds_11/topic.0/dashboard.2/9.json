@@ -1,0 +1,40 @@
+{
+  "parent_id": null,
+  "dashboard_id": 2,
+  "view_class": "11I.treemap",
+  "title": "Средние продажи в регионах и городах, руб.",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 5,
+      "w": 9,
+      "x": 0,
+      "y": 0
+    },
+    "limit": 8,
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "style": {},
+      "xAxis": "county;city",
+      "yAxis": "measures",
+      "filters": {
+        "county": true,
+        "last_update": true
+      },
+      "measures": [
+        "avg(price):avg_price"
+      ],
+      "dimensions": [
+        "county",
+        "city"
+      ]
+    },
+    "onClickDataPoint": "lpe:setKoobFilters(\"luxms_edu.luxms_edu_oil_sales\",\"county\",[\"=\",county])"
+  },
+  "created": "2024-04-25T14:12:09.103647+03:00"
+}

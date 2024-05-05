@@ -1,0 +1,66 @@
+{
+  "parent_id": null,
+  "dashboard_id": 1,
+  "view_class": "111.gauge",
+  "title": "Количество покупок всех видов топлива и кол-во транзакций",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 4,
+      "w": 6,
+      "x": 0,
+      "y": 4
+    },
+    "display": {
+      "range": [
+        0,
+        100000
+      ],
+      "stoplight": {
+        "lights": [
+          {
+            "name": "Плохо",
+            "color": "rgba(220,22,22,1)",
+            "limit": [
+              0,
+              15000
+            ]
+          },
+          {
+            "name": "Средне",
+            "color": "rgba(232,229,10,1)",
+            "limit": [
+              15000,
+              75000
+            ]
+          },
+          {
+            "name": "Хорошо",
+            "color": "rgba(74,224,14,1)",
+            "limit": [
+              75000,
+              100000
+            ]
+          }
+        ]
+      }
+    },
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "style": {},
+      "yAxis": "measures",
+      "filters": {
+        "date": true
+      },
+      "measures": [
+        "count(price):count_price"
+      ]
+    }
+  },
+  "created": "2024-04-25T12:32:59.942946+03:00"
+}

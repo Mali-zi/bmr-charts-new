@@ -1,0 +1,48 @@
+{
+  "parent_id": null,
+  "dashboard_id": 4,
+  "view_class": "pivot/table",
+  "title": "Сводная таблица",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 8,
+      "w": 12,
+      "x": 0,
+      "y": 0
+    },
+    "report": [
+      {
+        "title": "Отчёт для сертификации для сводной таблицы",
+        "output": "xlsx",
+        "template": "res:ds_11:.reports/template (1)"
+      }
+    ],
+    "display": {
+      "headerStyle": {
+        "color": "rgba(179,79,0,1)",
+        "fontSize": 24
+      }
+    },
+    "options": [],
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "style": {},
+      "xAxis": "city",
+      "yAxis": "measures",
+      "measures": [
+        "min(price):min_price",
+        "max(price):max_price"
+      ],
+      "dimensions": [
+        "city"
+      ]
+    }
+  },
+  "created": "2024-04-26T17:32:12.8793+03:00"
+}

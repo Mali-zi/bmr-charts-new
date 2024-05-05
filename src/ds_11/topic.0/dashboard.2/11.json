@@ -1,0 +1,41 @@
+{
+  "parent_id": null,
+  "dashboard_id": 2,
+  "view_class": "1II.tableP",
+  "title": "Мин/мах продажи по видам топлива, руб.",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 5,
+      "w": 5,
+      "x": 0,
+      "y": 5
+    },
+    "options": [
+      "FullWidth"
+    ],
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "style": {},
+      "xAxis": "gasoline_type;pump_type",
+      "yAxis": "measures",
+      "filters": {
+        "city": true
+      },
+      "measures": [
+        "min(price):min_price",
+        "max(price):max_price"
+      ],
+      "dimensions": [
+        "gasoline_type",
+        "pump_type"
+      ]
+    }
+  },
+  "created": "2024-04-25T14:27:40.54393+03:00"
+}

@@ -1,0 +1,41 @@
+{
+  "parent_id": null,
+  "dashboard_id": 5,
+  "view_class": "internal",
+  "title": "Менеджеры",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "url": "res:MyComponent.js",
+    "frame": {
+      "h": 4,
+      "w": 12,
+      "x": 0,
+      "y": 0
+    },
+    "dataSource": {
+      "koob": "luxmsbi.orders_full",
+      "style": {
+        "measures": {
+          "sum_year_salary": {
+            "color": "red",
+            "title": "Зарплата"
+          }
+        }
+      },
+      "xAxis": "emp_fio",
+      "yAxis": "measures",
+      "measures": [
+        "sum(year_salary):sum_year_salary"
+      ],
+      "dimensions": [
+        "emp_fio"
+      ]
+    }
+  },
+  "created": "2024-04-27T11:35:20.390348+03:00"
+}

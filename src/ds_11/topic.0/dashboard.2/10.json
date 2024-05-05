@@ -1,0 +1,47 @@
+{
+  "parent_id": null,
+  "dashboard_id": 2,
+  "view_class": "koob-table-simple",
+  "title": "Сумма продаж по городам",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 5,
+      "w": 3,
+      "x": 9,
+      "y": 0
+    },
+    "report": [
+      {
+        "title": "Отчёт 26 04",
+        "output": "xlsx",
+        "template": "res:ds_11:.reports/template"
+      }
+    ],
+    "options": [
+      "FullWidth"
+    ],
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "style": {},
+      "xAxis": ";city",
+      "yAxis": "measures",
+      "filters": {
+        "county": true
+      },
+      "measures": [
+        "sum(price):sum_price"
+      ],
+      "dimensions": [
+        "city"
+      ]
+    },
+    "onClickDataPoint": "lpe:setKoobFilters(\"luxms_edu.luxms_edu_oil_sales\",\"city\",[\"=\",city])"
+  },
+  "created": "2024-04-25T14:18:54.391468+03:00"
+}

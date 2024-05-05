@@ -1,0 +1,34 @@
+{
+  "parent_id": null,
+  "dashboard_id": 3,
+  "view_class": "VizelKoobControl",
+  "title": "Управляющий деш для сертификации",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 4,
+      "w": 4,
+      "x": 12,
+      "y": 0
+    },
+    "options": [
+      "EastPanel",
+      "Hidden"
+    ],
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "xAxis": "city;gasoline_type",
+      "yAxis": "measures",
+      "dimensions": [
+        "city",
+        "gasoline_type"
+      ]
+    }
+  },
+  "created": "2024-04-26T15:11:26.919682+03:00"
+}

@@ -1,0 +1,39 @@
+{
+  "parent_id": null,
+  "dashboard_id": 1,
+  "view_class": "1I1.scales",
+  "title": "Сравнение Blue Super/Excellium Diesel по кол-ву продаж",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 2,
+      "w": 5,
+      "x": 7,
+      "y": 0
+    },
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "style": {},
+      "yAxis": "measures;gasoline_type",
+      "filters": {
+        "gasoline_type": [
+          "=",
+          "Blue Super",
+          "Excellium Diesel"
+        ]
+      },
+      "measures": [
+        "sum(price)*86:rub_sum_price"
+      ],
+      "dimensions": [
+        "gasoline_type"
+      ]
+    }
+  },
+  "created": "2024-04-25T11:56:38.410881+03:00"
+}

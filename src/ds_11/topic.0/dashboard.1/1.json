@@ -1,0 +1,60 @@
+{
+  "parent_id": null,
+  "dashboard_id": 1,
+  "view_class": "1II.bar",
+  "title": "Топ 5 видов топлива по продажам",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 4,
+      "w": 7,
+      "x": 0,
+      "y": 0
+    },
+    "display": {
+      "limit": 10,
+      "headerStyle": {
+        "color": "rgba(29,131,0,1)",
+        "fontSize": 18,
+        "background": "rgba(127,199,255,1)"
+      },
+      "rotateXLabel": "0",
+      "rotateYLabel": "45",
+      "xAxisLabelLimit": "20"
+    },
+    "options": [],
+    "dataSource": {
+      "koob": "luxms_edu.luxms_edu_oil_sales",
+      "style": {
+        "measures": {
+          "rub_sum_price": {
+            "color": "rgba(180,28,28,1)",
+            "title": "Сумма продаж"
+          }
+        }
+      },
+      "xAxis": "gasoline_type",
+      "yAxis": "measures",
+      "sortBy": "-rub_sum_price",
+      "filters": {
+        "pump_type": true,
+        "last_update": true
+      },
+      "measures": [
+        "sum(price*86):rub_sum_price"
+      ],
+      "hierarchy": [
+        "city=>last_update"
+      ],
+      "dimensions": [
+        "gasoline_type"
+      ]
+    }
+  },
+  "created": "2024-04-25T10:36:52.659014+03:00"
+}

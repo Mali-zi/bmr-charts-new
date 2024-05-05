@@ -1,0 +1,15 @@
+{
+  "topic_id": 0,
+  "icon_id": 0,
+  "title": "кастом на ECharts",
+  "srt": 2147483647,
+  "config": {
+    "icon": "noIcon",
+    "viewport": {
+      "h": 8,
+      "w": 12
+    }
+  },
+  "created": "2024-04-27T10:27:16.20942+03:00",
+  "is_hidden": 0
+}
