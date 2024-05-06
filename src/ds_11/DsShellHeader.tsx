@@ -10,6 +10,7 @@ import {
 import { urlState } from "bi-internal/core";
 import { ThemeToggler } from "@consta/uikit/ThemeToggler";
 import { ConstaThemeService } from "../services/ConstaThemeService";
+import "./DsShellHeader.scss";
 
 interface IDsShellHeaderProps {
   schema_name: string;

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as echarts from "echarts";
-import "./index.scss";
+import "./MyComponent.scss";
 
 export default function MyComponent(props) {
   const { cfg, subspace, dp } = props;

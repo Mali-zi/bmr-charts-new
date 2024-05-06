@@ -50,7 +50,7 @@ export class ConstaThemeService extends BaseService<IConstaThemeModel> {
         ) || themes[0],
       themes,
     });
-    Promise.all([]).then([]);
+    Promise.all([]).then(([]) => []);
   }
   public setTheme = (theme: IConstaTheme) => {
     ThemeVC.getInstance().setTheme(theme.key);
