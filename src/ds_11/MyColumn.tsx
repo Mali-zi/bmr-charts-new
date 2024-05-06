@@ -8,25 +8,32 @@ import {
 import { ConstaThemeService } from "../services/ConstaThemeService";
 import { Theme } from "@consta/uikit/Theme";
 
+interface IItem {
+  emp_fio: string;
+  sum_year_salary: string;
+}
+
+interface IData {
+  category: string;
+  value: string;
+}
+
 const MyColumn = (props) => {
   const { cfg, subspace, dp } = props;
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<IData[]>([]);
   const constaThemeServiceModel =
     useService<ConstaThemeService>(ConstaThemeService);
 
   useEffect(() => {
-    dp.getKoobData(subspace).then((rawData) => {
+    dp.getKoobData(subspace).then((rawData: IItem[]) => {
       console.log("rawData: ", rawData);
-      console.log("subspace.xs: ", subspace.xs);
 
-      const newData = rawData.map((data) => {
-        console.log("data: ", data);
+      const newData = rawData.map((item) => ({
+        category: item.emp_fio,
+        value: item.sum_year_salary,
+      }));
+      console.log("newData: ", newData);
 
-        return {
-          category: data.emp_fio,
-          value: data.sum_year_salary,
-        };
-      });
       setData(newData);
     });
   }, []);
