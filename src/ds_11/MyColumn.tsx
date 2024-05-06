@@ -19,14 +19,12 @@ const MyColumn = (props) => {
       console.log("rawData: ", rawData);
       console.log("subspace.xs: ", subspace.xs);
 
-      const newData = subspace.xs.map((x, xIdx) => {
-        console.log("subspace.ys: ", subspace.ys);
+      const newData = rawData.map((data) => {
+        console.log("data: ", data);
 
         return {
-          category: x.id,
-          x,
-          y: subspace.ys[0],
-          value: rawData[xIdx].sum_year_salary,
+          category: data.emp_fio,
+          value: data.sum_year_salary,
         };
       });
       setData(newData);
