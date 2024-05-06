@@ -2,6 +2,8 @@ import React, { memo } from "react";
 import { Breadcrumbs } from "@consta/uikit/Breadcrumbs";
 import { Theme, presetGpnDefault } from '@consta/uikit/Theme';
 import {L10n} from 'bi-internal/ui';
+import {DsStateService, useServiceItself, useService} from 'bi-internal/services';
+import { urlState } from "bi-internal/core";
 
 interface IDsShellHeaderProps {
   schema_name: string;
@@ -11,22 +13,21 @@ interface IDsShellHeaderProps {
 }
 
 const CBreadcrumbs = () => {
+  const url = urlState.getModel();
+  const dsStateService = useService<DsStateService>(DsStateService, url.segmentId);
+
   const pages = [
     {
       label: <L10n>datasets</L10n>,
       href: '/#/ds',
     },
     {
-      label: 'Страница 1',
-      href: 'https://url.com/page-1',
+      label: dsStateService.datasetTitle,
+      href: `/#/${url.segment}/${url.segmentId}`,
     },
     {
-      label: 'Страница 2',
-      href: 'https://url.com/page-2',
-    },
-    {
-      label: 'Страница 3',
-      href: 'https://url.com/page-3',
+      label: dsStateService.dboard.title,
+      href: `/#/${url.segment}/${url.segmentId}/${url.route.replace('#', '')}`,
     },
   ];
   return (
