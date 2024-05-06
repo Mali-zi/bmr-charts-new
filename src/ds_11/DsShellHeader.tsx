@@ -67,7 +67,7 @@ const ThemeTogglerExampleGetters = () => {
   );
 };
 
-const DsShellHeader = React.memo((props: IDsShellHeaderProps) => {
+const DsShellHeader = memo((props: IDsShellHeaderProps) => {
   const { schema_name } = props;
   const mainToolbar = useService<MainToolbarVC>(MainToolbarVC, schema_name);
   const constaThemeService =

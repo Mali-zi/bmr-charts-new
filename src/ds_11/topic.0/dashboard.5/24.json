@@ -1,0 +1,33 @@
+{
+  "parent_id": null,
+  "dashboard_id": 5,
+  "view_class": "internal",
+  "title": "Менеджеры-2",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 4,
+      "w": 12,
+      "x": 0,
+      "y": 4
+    },
+    "dataSource": {
+      "koob": "luxmsbi.orders_full",
+      "style": {},
+      "xAxis": "emp_fio",
+      "yAxis": "measures",
+      "measures": [
+        "sum(year_salary):sum_year_salary"
+      ],
+      "dimensions": [
+        "emp_fio"
+      ]
+    }
+  },
+  "created": "2024-05-06T17:14:00.532894+03:00"
+}
