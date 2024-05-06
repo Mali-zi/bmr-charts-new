@@ -1,8 +1,27 @@
 .ConstaHeader {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-direction: row;
   padding: 1rem;
   height: 3.5rem;
+}
+
+.CBreadCrumbs {
+  flex: 1;
+}
+
+.rightSectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.Theme.Popover {
+  z-index: 11;
+}
+
+.ThemeToggler {
+  margin-right: 1rem;
 }
