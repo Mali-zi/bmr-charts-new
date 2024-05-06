@@ -68,6 +68,7 @@ module.exports = {
   externals: {
     'react': 'react',
     'react-dom': 'react-dom',
+    'react-dom/client': 'react-dom',
     'classnames': 'classnames',
     //'jquery': 'jquery',
     'axios': 'axios',
