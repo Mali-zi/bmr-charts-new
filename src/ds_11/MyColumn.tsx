@@ -16,35 +16,32 @@ const MyColumn = (props) => {
 
   useEffect(() => {
     dp.getKoobData(subspace).then((rawData) => {
-      console.log('rawData: ', rawData);
-      const newData = subspace.xs.map((x, xIdx) => ({
-        category: x.id,
-        x,
-        y: subspace.ys[0],
-        value: rawData[0][xIdx],
-      }));
+      console.log("rawData: ", rawData);
+      console.log("subspace.xs: ", subspace.xs);
+
+      const newData = subspace.xs.map((x, xIdx) => {
+        console.log("subspace.ys: ", subspace.ys);
+
+        return {
+          category: x.id,
+          x,
+          y: subspace.ys[0],
+          value: rawData[xIdx].sum_year_salary,
+        };
+      });
       setData(newData);
     });
   }, []);
-
-  const dataSimple = [
-    { parameter: 'Параметр 1', number: 1234 },
-    { parameter: 'Параметр 2', number: 1083 },
-    { parameter: 'Параметр 3', number: 672 },
-    { parameter: 'Параметр 4', number: 301 },
-    { parameter: 'Параметр 5', number: 167 },
-  ];
 
   return (
     <Theme preset={constaThemeServiceModel.currentTheme.preset}>
       <div>Еще одна диаграмма</div>
       <Column
-      style={{ maxWidth: 500, maxHeight: 200 }}
-      data={dataSimple}
-      xField="parameter"
-      yField="number"
-    />
-      {/* <Column data={data} xField={"category"} yField={"value"} /> */}
+        data={data}
+        xField={"category"}
+        yField={"value"}
+        style={{ width: "100%", height: 400 }}
+      />
     </Theme>
   );
 };
