@@ -1,0 +1,36 @@
+{
+  "parent_id": null,
+  "dashboard_id": 5,
+  "view_class": "1II.column",
+  "title": "Эффективность",
+  "description": null,
+  "frame": null,
+  "layout": null,
+  "length": null,
+  "idx": 0,
+  "srt": 2147483647,
+  "config": {
+    "frame": {
+      "h": 3,
+      "w": 12,
+      "x": 0,
+      "y": 5
+    },
+    "dataSource": {
+      "koob": "luxmsbi.orders_full",
+      "style": {},
+      "xAxis": "categoryname",
+      "yAxis": "measures",
+      "filters": {
+        "emp_fio": true
+      },
+      "measures": [
+        "sum(unitcost):sum_unitcost"
+      ],
+      "dimensions": [
+        "categoryname"
+      ]
+    }
+  },
+  "created": "2024-05-07T10:16:00.70509+03:00"
+}

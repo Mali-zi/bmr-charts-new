@@ -35,7 +35,8 @@
       "dimensions": [
         "emp_fio"
       ]
-    }
+    },
+    "onClickDataPoint": "lpe:setKoobFilter('','emp_fio',['=',emp_fio])"
   },
   "created": "2024-04-27T11:35:20.390348+03:00"
 }
