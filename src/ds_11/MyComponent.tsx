@@ -9,6 +9,21 @@ export default function MyComponent(props) {
   let chart = null;
   let options = {};
 
+  const onChartClick = (params) => {
+    if (cfg.getRaw().hasOwnProperty("onClickDataPoint")) {
+      const vcpv = {
+        m: undefined,
+        l: undefined,
+        p: undefined,
+        z: params.data.z,
+        y: params.data.y,
+        x: params.data.x,
+        v: params.value,
+      };
+      cfg.controller.handleVCPClick(params.event, vcpv);
+    }
+  };
+
   const renderChart = (dataArr) => {
     if (containerRef?.current && dataArr?.length) {
       if (!chart) {
@@ -60,6 +75,8 @@ export default function MyComponent(props) {
           },
         };
         chart.setOption(options);
+        chart.resize();
+        chart.on("click", "series", onChartClick);
       }
     }
   };
